@@ -232,6 +232,12 @@
 }
 
 
+.map-block {
+    min-width: 200px;
+    min-height: 100px;
+    height: 100%;
+    width: 100%;
+}
 
 .products::-webkit-scrollbar {
     width: 12px; /* ширина вертикального скролбара */

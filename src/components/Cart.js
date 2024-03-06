@@ -2,6 +2,19 @@ import Button from "./Button";
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment, addProductOne, removProductOne } from '../store/reduser'
+import MapApp from "./Map";
+import { useJsApiLoader } from "@react-google-maps/api"; 
+
+
+
+
+const API_KEY = process.env.REACT_APP_API_KEY
+
+const selectedLocation = {
+    lat: 28.7041,
+    lng: 77.1025,
+}
+
 
 
 export default function Cart() {
@@ -68,11 +81,21 @@ const handleSubmit =(e) => {
     console.log('handleSubmit')
 } 
 
+const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: API_KEY
+  })
+
 console.log(items)
  return(
     <div className="cart-block"> 
         <div className="cart">
+
             <form className="form" onSubmit={handleSubmit}>
+            <div className="map-block">
+                {isLoaded ? <MapApp center={selectedLocation}/> : <h3>Loading</h3>}
+            </div>
+
                 <div className="form-item">
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" onChange={handleInputChange}/>
