@@ -1,0 +1,38 @@
+{
+    "paracetamol0":{
+        "cost": 10
+    },
+    "paracetamol1":{
+        "cost": 11
+    },
+    "paracetamol2":{
+        "cost": 20
+    },
+    "paracetamol3":{
+        "cost": 30
+    },
+    "paracetamol4":{
+        "cost": 40
+    },
+    "paracetamol5":{
+        "cost": 50
+    },    
+    "paracetamol6":{
+        "cost": 60
+    },
+    "paracetamol7":{
+        "cost": 70
+    },
+    "paracetamol8":{
+        "cost": 80
+    },
+    "paracetamol9":{
+        "cost": 90
+    }
+
+
+
+
+
+
+}
