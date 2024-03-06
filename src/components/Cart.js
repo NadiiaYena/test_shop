@@ -79,6 +79,7 @@ function doOrder() {
 const handleSubmit =(e) => {
     e.preventDefault()
     console.log('handleSubmit')
+    localStorage.setItem('formData', JSON.stringify(formData));
 } 
 
 const { isLoaded } = useJsApiLoader({
@@ -86,6 +87,8 @@ const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: API_KEY
   })
 
+
+  
 console.log(items)
  return(
     <div className="cart-block"> 
@@ -102,11 +105,11 @@ console.log(items)
                 </div>
                 <div className="form-item">
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" onChange={handleInputChange}/>
+                    <input type="email" id="email"  onChange={handleInputChange}/>
                 </div>
                 <div className="form-item">
                     <label htmlFor="phone">Phone:</label>
-                    <input type="phone"  id="phone" onChange={handleInputChange}/>
+                    <input type="numder"  id="phone"  maxLength="10"  onChange={handleInputChange}/>
                 </div>
                 <div className="form-item">
                     <label htmlFor="address">Adress:</label>
