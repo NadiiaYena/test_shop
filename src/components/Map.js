@@ -1,5 +1,5 @@
 import React, { useRef} from 'react'
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap } from '@react-google-maps/api';
 
 const containerStyle = {
     width: '100%',
@@ -13,7 +13,6 @@ const defaultOptions = {
 
 }
   
-const API_KEY = process.env.REACT_APP_API_KEY
 
 export default  function MapApp({center}){
    const mapRef =  useRef(undefined)
